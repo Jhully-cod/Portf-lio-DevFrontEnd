@@ -1,0 +1,351 @@
+/* Reset Básico: margem, padding e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Altura total e rolagem suave */
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Corpo: fundo escuro, texto claro, fonte padrão */
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header: flexbox para centralizar conteúdo */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px;
+    border-bottom: 1px solid #3A3A3A;
+}
+
+/* Navegação: flex com espaçamento */
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+/* Links do menu: cor, transição e hover */
+nav a {
+    color: #E0E0E0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #00FFC8;
+}
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centraliza o nav */
+  padding: 10px 0;
+}
+
+.logo-icon {
+  position: absolute;
+  left: 20px;         /* distância da esquerda */
+  top: 50%;           /* centraliza verticalmente */
+  transform: translateY(-50%);
+  display: block;
+  width: 50px;         /* tamanho menor, mais discreto */
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;     /* dá um feedback que é clicável */
+  transition: box-shadow 0.3s ease;
+}
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+/* Hero Terminal: área centralizada com terminal */
+.hero-terminal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: transparent;
+}
+
+/* Terminal: estilo monoespaçado, cor e sombra */
+.terminal {
+    background: transparent;
+    border: 1px solid #3A3A3A;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    font-family: 'Fira Code', monospace;
+    font-size: 1.8rem;
+    color: #00FFC8;
+    white-space: pre-line;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Cursor animado no terminal */
+#typed-text::after {
+    content: "|";
+    animation: blink 0.7s steps(1) infinite;
+}
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Seções gerais: espaçamento e largura máxima */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Títulos secundários com fonte e cor de destaque */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00FFC8;
+    margin-bottom: 20px;
+}
+
+/* Grid responsivo para projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Cartões de projeto: fundo, borda, sombra e hover */
+.card {
+    background: #1A1A1A;
+    padding: 30px;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid #00FFC8;
+}
+.card h3 {
+    margin-top: 0;
+    color: #00FFC8;
+}
+.card p {
+    color: #A0A0A0;
+    margin: 15px 0;
+}
+.card a.btn-projeto {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #00FFC8;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.card a.btn-projeto:hover {
+    background: #00e6b8;
+    transform: scale(1.05);
+}
+
+/* Rodapé centralizado com borda superior */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #3A3A3A;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Sessão Sobre: flexbox com espaçamento */
+.sobre-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    gap: 40px;
+}
+.sobre-texto {
+    flex: 1;
+    color: #E0E0E0;
+}
+.sobre-texto h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00FFC8;
+    margin-bottom: 20px;
+}
+.sobre-texto p {
+    line-height: 1.6;
+    color: #A0A0A0;
+}
+.sobre-foto {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.sobre-foto img {
+    max-width: 700px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Sessão Habilidades: grid e cartões com hover */
+.habilidades-section {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.habilidades-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00FFC8;
+    margin-bottom: 30px;
+}
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+.habilidade-card {
+    background: #1A1A1A;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+    padding: 20px;
+    width: 140px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+.habilidade-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,255,200,0.4);
+}
+.habilidade-card img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    filter: grayscale(100%) brightness(70%);
+    transition: filter 0.3s ease;
+}
+.habilidade-card:hover img {
+    filter: grayscale(0%) brightness(100%);
+}
+.habilidade-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #00FFC8;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+.habilidade-card p {
+    font-size: 0.85rem;
+    color: #A0A0A0;
+    line-height: 1.3;
+}
+
+/* Responsividade tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .sobre-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sobre-foto {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .sobre-foto img {
+        max-width: 200px;
+    }
+}
+
+/* Responsividade celular */
+@media (max-width: 480px) {
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+    .terminal {
+        font-size: 1.6rem;
+        padding: 15px;
+    }
+}
+
+/* Sessão Contato: container e textos */
+.contato-section {
+  max-width: 600px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 20px 10px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+.contato-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #00FFC8;
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+}
+.contato-section p {
+  color: #A0A0A0;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Ícones de contato com flexbox e espaçamento */
+.contato-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Botões ícones: tamanho e transição */
+.btn-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.btn-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.btn-icon:hover img {
+  filter: none;
+  transform: scale(1.1);
+}

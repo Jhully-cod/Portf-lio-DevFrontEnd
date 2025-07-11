@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jhullyana Soares — Portfólio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/iconjs.png" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <a href="#" class="logo-icon">
+    <img src="assets/iconjs.png" alt="Logo Jhullyana" />
+  </a>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+    <section class="hero-terminal" aria-label="Apresentação">
+        <div class="terminal" role="textbox" aria-live="polite" aria-atomic="true">
+            <pre id="typed-text"></pre>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-section" aria-labelledby="sobre-title">
+        <div class="sobre-texto">
+            <h2 id="sobre-title">Sobre</h2>
+            <p>
+                Olá, sou Jhullyana Soares, desenvolvedora front-end com foco em criar interfaces modernas,
+                responsivas e funcionais. Acredito que tecnologia é onde lógica, criatividade e organização se encontram.
+                Trabalho com HTML, CSS, JavaScript e também exploro ferramentas visuais, sempre buscando unir design e código
+                de forma prática e eficiente. Meu objetivo é entregar soluções visuais claras, intuitivas e bem estruturadas,
+                sempre alinhadas com inovação e experiência do usuário.
+            </p>
+        </div>
+        <div class="sobre-foto">
+            <img src="assets/fotojs.jpg" alt="Foto de Jhullyana Soares" />
+        </div>
+    </section>
+
+    <section id="habilidades" class="habilidades-section" aria-labelledby="habilidades-title">
+        <h2 id="habilidades-title">Habilidades e Tecnologias:</h2>
+        <div class="habilidades-grid">
+            <article class="habilidade-card">
+                <img src="assets/habilidades/python.png" alt="Logo Python" />
+                <h3>Python</h3>
+                <p>Programação versátil para automação, scripts e desenvolvimento web.</p>
+            </article>
+            <article class="habilidade-card">
+                <img src="assets/habilidades/html.png" alt="Logo HTML5" />
+                <h3>HTML5</h3>
+                <p>Estrutura semântica e acessível para páginas web modernas.</p>
+            </article>
+            <article class="habilidade-card">
+                <img src="assets/habilidades/css-3.png" alt="Logo CSS3" />
+                <h3>CSS3</h3>
+                <p>Estilização avançada e layouts responsivos para interfaces elegantes.</p>
+            </article>
+            <article class="habilidade-card">
+                <img src="assets/habilidades/script-java.png" alt="Logo JavaScript" />
+                <h3>JavaScript</h3>
+                <p>Interatividade e lógica para experiências web dinâmicas.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="projetos" aria-labelledby="projetos-title">
+        <h2 id="projetos-title">Meus Projetos</h2>
+        <div class="projetos-grid">
+            <article class="card">
+                <h3>Blog Preview Card</h3>
+                <p>Componente de visualização de artigo, feito com HTML e CSS focado em layout responsivo e clean.</p>
+                <a href="https://jhully-cod.github.io/blog-preview-card/" target="_blank" rel="noopener noreferrer" class="btn-projeto">Ver Projeto</a>
+            </article>
+
+            <article class="card">
+                <h3>FlexQR</h3>
+                <p>Interface simples para exibição de QR Code, desenvolvida usando Flexbox para estudo de layout responsivo.</p>
+                <a href="https://jhully-cod.github.io/FlexQR/" target="_blank" rel="noopener noreferrer" class="btn-projeto">Ver Projeto</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="contato" class="contato-section" aria-labelledby="contato-title">
+        <h2 id="contato-title">Contato</h2>
+        <p>Para dúvidas, propostas ou um bate-papo, envie-me um email, conecte-se comigo no LinkedIn ou confira meus projetos no GitHub.</p>
+        <div class="contato-icons">
+            <a href="mailto:jhullyanawork@outlook.com" aria-label="Enviar email para Jhullyana Soares" target="_blank" rel="noopener noreferrer" class="btn-icon">
+                <img src="assets/e-mail.png" alt="Ícone Email" />
+            </a>
+            <a href="https://www.linkedin.com/in/jhullyana-bento/" aria-label="Perfil LinkedIn de Jhullyana Soares" target="_blank" rel="noopener noreferrer" class="btn-icon">
+                <img src="assets/linkedin.png" alt="Ícone LinkedIn" />
+            </a>
+            <a href="https://github.com/Jhully-cod" aria-label="Perfil GitHub de Jhullyana Soares" target="_blank" rel="noopener noreferrer" class="btn-icon">
+                <img src="assets/github.png" alt="Ícone GitHub" />
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Jhullyana Soares - Todos os direitos reservados.
+</footer>
+
+<!-- Script Integrado -->
+<script>
+const text = `Jhullyana Soares\nDesenvolvedora Front-End`;
+const typedText = document.getElementById("typed-text");
+let index = 0;
+
+function type() {
+    if (index < text.length) {
+        typedText.textContent += text[index] === '\n' ? '\n' : text[index];
+        index++;
+        setTimeout(type, 100);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", type);
+</script>
+
+</body>
+</html>
